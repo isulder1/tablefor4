@@ -3,8 +3,14 @@
 reviewApp.controller('reviewController',
     function reviewController ($scope) {
 
-        $scope.review = {
-            name: "Roat Osha"
-        }
+        $scope.reviews = [
+            {
+                name: "Roat Osha"
+            }
+        ];
+
+        $scope.showReviewDetails = function (review) {
+            console.log('In showReviewDetails for: ' + review.name);
+        };
     }
 );

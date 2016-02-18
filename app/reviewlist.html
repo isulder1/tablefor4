@@ -7,29 +7,31 @@
     <link rel="stylesheet" href="css/app.css" />
 
 </head>
-<body>
+<body ng-cloak>
     <div class="container">
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav">
-
+                    <li><a href="addreview.html">Add Review</a></li>
                 </ul>
             </div>
         </div>
         <div ng-controller="reviewController">
-            <div class="row">
-                <div class="span11">
-                    <h2>{{review.name}}</h2>
+            <div ng-repeat="review in reviews">            
+                <div class="row">
+                    <div class="span11">
+                        <h2 ng-click="showReviewDetails(review)">{{review.name}}</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="span5">
-                    Left side
-                </div>
-                <div class="span5">
-                    Right side
-                </div>
-            </div>            
+                <div class="row">
+                    <div class="span5">
+                        Left side
+                    </div>
+                    <div class="span5">
+                        Right side
+                    </div>
+                </div>       
+            </div>     
         </div>
     </div>
 
